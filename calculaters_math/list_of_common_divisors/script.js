@@ -1,6 +1,5 @@
 const num1 = document.querySelector('#num1');
 const num2 = document.querySelector('#num2');
-const num = document.querySelectorAll('.num');
 const ans = document.querySelector('#ans');
 const btn = document.querySelector('#btn');
 
