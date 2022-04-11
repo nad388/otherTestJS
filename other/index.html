@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Какие именно параметры показывать</title>
+</head>
+
+<body>
+
+<br>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<br>
+<br>
+
+<input type="checkbox" checked> Сколько пробелов<br>
+<input type="checkbox"> Сколько символов<br>
+<input type="checkbox"> Сколько символов без пробелов<br>
+<div></div>
+
+<script>
+
+
+let textarea = document.querySelector("textarea");
+let chbox = document.querySelectorAll("input");
+
+
+textarea.onblur = () => {
+let arrw = textarea.value.split(" ");
+let arrs = textarea.value.split("");
+
+arrw = arrw.length;
+arrs = arrs.length;
+let arrsws = arrs - arrw + 1;
+
+
+if (chbox[0].checked) {
+
+
+document.querySelector("div").innerHTML = "Сколько пробелов: " + arrw + "<br>";
+}
+
+if (chbox[1].checked) {
+let arr = textarea.value.split("");
+
+document.querySelector("div").innerHTML += "Сколько символов: " + arrs + "<br>";
+}
+
+if (chbox[2].checked) {
+
+
+
+document.querySelector("div").innerHTML += "Сколько символов без пробелов:" + arrsws + "<br>";
+}
+
+
+}
+
+</script>
+
+</body>
+
+</html>
